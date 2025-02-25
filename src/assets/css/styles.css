@@ -80,7 +80,7 @@ main {
 
   & .description {
     font-family: "Inter", sans-serif;
-    background:rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.5);
     font-optical-sizing: auto;
     text-shadow: none;
     line-height: 1.7;
@@ -131,7 +131,7 @@ main {
   }
 }
 
-@media (width > 650px) and (width < 900px) {
+@media (max-width: 900px) {
   .content {
     & .title {
       font-size: 1rem;
@@ -160,7 +160,7 @@ main {
   }
 }
 
-@media (width < 650px) {
+@media (max-width: 650px) {
   .content {
     & .title {
       font-size: 0.9rem;
@@ -185,6 +185,37 @@ main {
     &:nth-child(6) {
       left: calc(50% + 420px);
       opacity: 0;
+    }
+  }
+}
+
+/* Novas regras para dispositivos móveis */
+@media (max-width: 480px) {
+  body {
+    overflow: auto; /* Permite rolagem em dispositivos móveis */
+  }
+
+  .item {
+    width: 90vw; /* Reduz a largura dos itens para caber melhor na tela */
+    height: auto; /* Deixa a altura automática para flexibilidade */
+    border-radius: 10px; /* Arredonda as bordas em telas menores */
+    box-shadow: none; /* Remove a sombra em telas pequenas para simplicidade */
+  }
+
+  .content {
+    width: 80vw; /* Ajusta a largura do conteúdo */
+    left: 10%; /* Centraliza melhor o conteúdo em telas pequenas */
+    font-size: 0.75rem; /* Ajusta o tamanho da fonte */
+  }
+
+  .nav .btn {
+    padding: 0.5rem; /* Ajusta o padding para botões */
+    font-size: 1.5rem; /* Aumenta o tamanho do ícone para toque fácil */
+  }
+
+  @media (max-width: 320px) {
+    .content {
+      font-size: 0.65rem; /* Ajusta ainda mais o tamanho da fonte */
     }
   }
 }
